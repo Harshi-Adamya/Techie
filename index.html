@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+   
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Techie</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact Us</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/index.html">UI/UX Design</a></li>
+                  <li><a class="dropdown-item" href="/index.html">Web Development</a></li>
+                  <li><a class="dropdown-item" href="/index.html">Full Stack Mern Development</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Apply now</a></li>
+                  <li><a class="dropdown-item" href="#">Support Us</a></li>
+              
+                </ul>
+              </li>
+            </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control mx-2" type="search" placeholder="Search anything" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+              </form>
+
+              <div class="mx-4">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Email address</label>
+              <input type="email" class="form-control" id="inputEmail4" >
+            </div>
+          
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" >
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create New Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationDefault01">First name</label>
+              <input type="text" class="form-control" id="validationDefault01"  required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationDefault02">Last name</label>
+              <input type="text" class="form-control" id="validationDefault02" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationDefaultUsername">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                </div>
+                <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationDefault03">City</label>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="" required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationDefault04">State</label>
+              <input type="text" class="form-control" id="validationDefault04" placeholder="" required>
+            </div>
+            
+          </div>
+          <form class="form-inline">
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" >
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Confirm Password</label>
+              <input type="password" class="form-control" id="inputPassword4" >
+            </div>
+          </form>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Create Account</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+      <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Welcome to Techie.com</h2>
+              <p>Empowering career by enhancing skills</p>
+              <button class="btn btn-danger">Programming</button>
+              <button class="btn btn-warning">Development</button>
+              <button class="btn btn-info">Internships</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Skill development</h2>
+              <p>The best tech site to boost up your hidden skills</p>
+              <button class="btn btn-warning">Programming</button>
+              <button class="btn btn-info">Development</button>
+              <button class="btn btn-danger">Internships</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Focusing on knowledge</h2>
+              <p>Moving ahead with current tech trend</p>
+              <button class="btn btn-info">Programming</button>
+              <button class="btn btn-danger">Development</button>
+              <button class="btn btn-warning">Internships</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="container my-4">
+        <!-- my-4 is used to give margin 4 at y-axis -->
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success -emphasis">Join</strong>
+                <h3 class="mb-0">Global coding communities </h3>
+                <div class="mb-1 text-body-secondary">Join Now</div>
+                <p class="card-text mb-auto">Become an efficient programmer by becoming a part of these world-known communities.</p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250" src="thum2.jpg" alt=""></img>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-danger -emphasis">Development</strong>
+                <h3 class="mb-0">Web Development</h3>
+                <div class="mb-1 text-body-secondary">Start Now</div>
+                <p class="mb-auto">Welcome to the world of web development. Join our full fledged course on Web Development. It's time to enhance and gain skills.</p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250" src="thum3.jpg" alt=""></img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="container my-4">
+        <!-- my-4 is used to give margin 4 at y-axis -->
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary-emphasis">MERN</strong>
+                <h3 class="mb-0">Full stack MERN development</h3>
+                <div class="mb-1 text-body-secondary">Start Now</div>
+                <p class="card-text mb-auto">Welcome to the world of Full Stack MERN development. Take this course to gain in the full fledged knowledge of full stack development using MERN.</p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250" src="thum1.jpg" alt=""></img>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-warning-emphasis">Design</strong>
+                <h3 class="mb-0">UI/UX Designing</h3>
+                <div class="mb-1 text-body-secondary">Start Now</div>
+                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250" src="thum4.jpg" alt=""></img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class=" text-center" style="background-color: rgba(0, 0, 0, 0.201)";>
+        
+        <div class="container p-4 pb-0">
+          <!-- Section: Form -->
+          <section class="">
+            <form action="">
+              <!--Grid row-->
+              <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                  <p class="pt-2">
+                    <strong>Sign up for our newsletter</strong>
+                  </p>
+                </div>
+                <!--Grid column-->
+      
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form5Example27" class="form-control" />
+                    <label class="form-label" for="form5Example27">Email address</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+      
+                <!--Grid column-->
+                <div class="col-auto">
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-danger mb-4">
+                    Subscribe
+                  </button>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </form>
+          </section>
+          <!-- Section: Form -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.838);">
+          © 2023 Copyright:
+          <a class="text-info" href="#">Techie.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   
+  </body>
+</html> 
+
+
